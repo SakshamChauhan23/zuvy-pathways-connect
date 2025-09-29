@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import zuvyLogo from "@/assets/zuvy-logo.png";
+import zuvyLogo from "@/assets/zuvy-logo-new.png";
 
 const Hero = () => {
   return (
@@ -20,7 +20,7 @@ const Hero = () => {
               <a href="#programs" className="text-white/90 hover:text-white transition-smooth">Programs</a>
               <a href="#impact" className="text-white/90 hover:text-white transition-smooth">Impact</a>
               <a href="#testimonials" className="text-white/90 hover:text-white transition-smooth">Success Stories</a>
-              <Button variant="outline" className="border-white/30 text-white hover:bg-white hover:text-forest-green">
+              <Button variant="outline" className="border-white/30 bg-white text-forest-green hover:bg-white/90">
                 Contact Us
               </Button>
             </div>
@@ -51,7 +51,7 @@ const Hero = () => {
               <Button 
                 variant="outline" 
                 size="lg"
-                className="border-white/30 text-white hover:bg-white hover:text-forest-green px-8 py-4 text-lg"
+                className="border-white/30 text-white hover:bg-white hover:text-forest-green bg-white text-forest-green px-8 py-4 text-lg"
               >
                 Partner With Us
               </Button>
@@ -60,22 +60,27 @@ const Hero = () => {
 
           <div className="relative hidden lg:block">
             <div className="relative">
-              <div className="absolute inset-0 bg-gradient-accent rounded-3xl blur-3xl opacity-30 transform rotate-6"></div>
-              <div className="relative bg-white/10 backdrop-blur-md rounded-3xl p-8 border border-white/20">
+              {/* Floating elements with animations */}
+              <div className="absolute -top-4 -left-4 w-20 h-20 bg-sunbeam-yellow/20 rounded-full animate-bounce"></div>
+              <div className="absolute -bottom-8 -right-8 w-16 h-16 bg-moss-green/20 rounded-full animate-pulse"></div>
+              <div className="absolute top-1/2 -left-8 w-12 h-12 bg-white/10 rounded-full animate-ping"></div>
+              
+              <div className="absolute inset-0 bg-gradient-accent rounded-3xl blur-3xl opacity-30 transform rotate-6 animate-pulse"></div>
+              <div className="relative bg-white/10 backdrop-blur-md rounded-3xl p-8 border border-white/20 animate-fade-in">
                 <div className="grid grid-cols-2 gap-6">
-                  <div className="text-center">
+                  <div className="text-center animate-scale-in">
                     <div className="text-3xl font-bold text-sunbeam-yellow mb-2">2,000+</div>
                     <div className="text-white/80 text-sm">Learners Trained</div>
                   </div>
-                  <div className="text-center">
+                  <div className="text-center animate-scale-in" style={{animationDelay: '0.1s'}}>
                     <div className="text-3xl font-bold text-moss-green mb-2">18+</div>
                     <div className="text-white/80 text-sm">States Reached</div>
                   </div>
-                  <div className="text-center">
+                  <div className="text-center animate-scale-in" style={{animationDelay: '0.2s'}}>
                     <div className="text-3xl font-bold text-sunbeam-yellow mb-2">Top Tier</div>
                     <div className="text-white/80 text-sm">Placements</div>
                   </div>
-                  <div className="text-center">
+                  <div className="text-center animate-scale-in" style={{animationDelay: '0.3s'}}>
                     <div className="text-3xl font-bold text-moss-green mb-2">100%</div>
                     <div className="text-white/80 text-sm">Industry Ready</div>
                   </div>

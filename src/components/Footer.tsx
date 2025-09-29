@@ -1,4 +1,4 @@
-import zuvyLogo from "@/assets/zuvy-logo.png";
+import zuvyLogo from "@/assets/zuvy-logo-new.png";
 import { Separator } from "@/components/ui/separator";
 
 const Footer = () => {

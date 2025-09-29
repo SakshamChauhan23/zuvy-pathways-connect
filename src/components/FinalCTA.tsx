@@ -50,10 +50,10 @@ const FinalCTA = () => {
               </div>
               <h3 className="text-2xl font-bold text-white mb-4">For Organizations</h3>
               <p className="text-white/80 mb-6">Transform your workforce with custom learning solutions</p>
-              <Button 
+               <Button 
                 variant="outline"
-                className="w-full border-white/30 text-white hover:bg-white hover:text-forest-green font-semibold"
-              >
+                className="w-full border-white/30 bg-white text-forest-green hover:bg-white/90 font-semibold"
+               >
                 Explore Learning Solutions
               </Button>
             </div>
@@ -68,10 +68,10 @@ const FinalCTA = () => {
               </div>
               <h3 className="text-2xl font-bold text-white mb-4">For Partners</h3>
               <p className="text-white/80 mb-6">Create impact and access diverse talent pools</p>
-              <Button 
+               <Button 
                 variant="outline"
-                className="w-full border-white/30 text-white hover:bg-white hover:text-forest-green font-semibold"
-              >
+                className="w-full border-white/30 bg-white text-forest-green hover:bg-white/90 font-semibold"
+               >
                 Collaborate With Us
               </Button>
             </div>
