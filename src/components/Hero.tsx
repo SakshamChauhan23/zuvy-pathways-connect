@@ -1,64 +1,93 @@
 import { Button } from "@/components/ui/button";
 import Navigation from "@/components/Navigation";
 import heroBackgroundLearning from "@/assets/hero-background-learning.png";
+import { ArrowRight, CheckCircle } from "lucide-react";
 
 const Hero = () => {
   return (
     <>
       <Navigation />
 
-      <section className="relative min-h-screen bg-gradient-hero flex items-center overflow-hidden pt-24">
-        {/* Background Image */}
-        <div className="absolute inset-0">
-          <img
-            src={heroBackgroundLearning}
-            alt="Students learning together in collaborative environment"
-            className="w-full h-full object-cover"
-            onError={(e) => {
-              console.log('Hero background image failed to load, using fallback');
-              // Show a solid background if image fails to load
-              (e.currentTarget.parentElement as HTMLElement).style.background = 'linear-gradient(135deg, hsl(120 37% 35% / 0.8), hsl(79 35% 64% / 0.7))';
-              e.currentTarget.style.display = 'none';
-            }}
-            onLoad={() => {
-              console.log('Hero background image loaded successfully');
-            }}
-          />
-          {/* Balanced overlay for visibility and readability */}
-          <div className="absolute inset-0 bg-gradient-to-br from-forest-green/55 to-moss-green/45"></div>
+      <section className="relative min-h-screen flex items-center overflow-hidden pt-24 bg-light-beige">
+        {/* Gradient Background - Asymmetric design */}
+        <div className="absolute top-0 left-0 w-[60%] h-full bg-gradient-to-br from-[#E8F5E9] via-[#FFF9C4] to-transparent opacity-60"></div>
+        <div className="absolute top-0 right-0 w-[50%] h-[80%] bg-gradient-to-bl from-[#FFE0B2] via-[#FFF9C4] to-transparent opacity-50"></div>
+
+        {/* Animated gradient blobs with motion */}
+        <div className="absolute inset-0 overflow-hidden pointer-events-none">
+          <div className="absolute -top-20 -left-20 w-[500px] h-[500px] bg-gradient-to-br from-moss-green/15 to-transparent rounded-full blur-3xl animate-pulse"></div>
+          <div className="absolute top-1/3 right-10 w-[400px] h-[400px] bg-gradient-to-bl from-sunbeam-yellow/20 to-transparent rounded-full blur-3xl animate-pulse" style={{animationDelay: '1.5s'}}></div>
+          <div className="absolute bottom-10 left-1/4 w-[350px] h-[350px] bg-gradient-to-tr from-forest-green/10 to-transparent rounded-full blur-3xl animate-pulse" style={{animationDelay: '3s'}}></div>
         </div>
 
-        {/* Background pattern */}
-        <div className="absolute inset-0 opacity-5">
-          <div className="absolute inset-0 bg-gradient-to-br from-forest-green/10 to-moss-green/10"></div>
+        {/* Floating geometric shapes for motion graphics */}
+        <div className="absolute inset-0 overflow-hidden pointer-events-none">
+          {/* Square shapes */}
+          <div className="absolute top-20 left-[10%] w-16 h-16 border-2 border-moss-green/20 rounded-lg animate-float" style={{animationDelay: '0s'}}></div>
+          <div className="absolute top-40 right-[15%] w-12 h-12 border-2 border-sunbeam-yellow/20 rounded-lg animate-float-slow" style={{animationDelay: '1s'}}></div>
+          <div className="absolute bottom-40 right-[8%] w-14 h-14 bg-forest-green/5 rounded-xl animate-drift" style={{animationDelay: '4s'}}></div>
+
+          {/* Circle shapes */}
+          <div className="absolute bottom-32 left-[20%] w-20 h-20 border-2 border-forest-green/15 rounded-full animate-float" style={{animationDelay: '2s'}}></div>
+          <div className="absolute top-[60%] right-[10%] w-8 h-8 bg-moss-green/10 rounded-full animate-float-slow" style={{animationDelay: '0.5s'}}></div>
+          <div className="absolute top-[25%] right-[30%] w-10 h-10 border-2 border-sunbeam-yellow/15 rounded-full animate-drift" style={{animationDelay: '3.5s'}}></div>
+
+          {/* Triangle shapes using border trick */}
+          <div className="absolute top-[30%] left-[5%] w-0 h-0 border-l-[12px] border-l-transparent border-r-[12px] border-r-transparent border-b-[20px] border-b-sunbeam-yellow/20 animate-spin-slow"></div>
+          <div className="absolute bottom-[25%] right-[25%] w-0 h-0 border-l-[10px] border-l-transparent border-r-[10px] border-r-transparent border-b-[16px] border-b-moss-green/15 animate-spin-slow" style={{animationDelay: '3s'}}></div>
+
+          {/* Plus signs */}
+          <div className="absolute top-[45%] left-[15%] text-3xl text-forest-green/10 animate-float" style={{animationDelay: '1.5s'}}>+</div>
+          <div className="absolute bottom-[40%] right-[20%] text-2xl text-moss-green/15 animate-float-slow" style={{animationDelay: '2.5s'}}>+</div>
+          <div className="absolute top-[35%] right-[5%] text-4xl text-sunbeam-yellow/10 animate-spin-slow" style={{animationDelay: '4.5s'}}>+</div>
+
+          {/* Dots */}
+          <div className="absolute top-[55%] right-[5%] w-3 h-3 bg-sunbeam-yellow/20 rounded-full animate-pulse-subtle" style={{animationDelay: '1s'}}></div>
+          <div className="absolute bottom-[45%] left-[25%] w-4 h-4 bg-moss-green/15 rounded-full animate-pulse-subtle" style={{animationDelay: '2s'}}></div>
+          <div className="absolute top-[15%] left-[30%] w-5 h-5 bg-forest-green/10 rounded-full animate-pulse-subtle" style={{animationDelay: '3.5s'}}></div>
         </div>
 
-        <div className="container mx-auto px-6 relative z-10">
-          {/* Hero Content */}
-          <div className="grid lg:grid-cols-2 gap-12 items-center py-12">
-            <div className="text-center lg:text-left">
-              <h1 className="text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
-                Intelligent Learning Solutions for{" "}
-                <span className="bg-gradient-to-r from-sunbeam-yellow to-moss-green bg-clip-text text-transparent">
-                  all
-                </span>
-              </h1>
+        <div className="container mx-auto px-6 py-12 relative z-10">
+          {/* Hero Content - Asymmetric Layout */}
+          <div className="grid lg:grid-cols-12 gap-12 items-center mb-20">
+            {/* Left Content - Takes 7 columns */}
+            <div className="lg:col-span-7 space-y-8">
+              {/* Badge */}
+              <div className="inline-flex items-center gap-2 px-4 py-2 bg-moss-green/10 rounded-full border border-moss-green/20">
+                <CheckCircle className="w-4 h-4 text-moss-green" />
+                <span className="text-small font-medium text-forest-green">Trusted by 6,000+ Learners Across India</span>
+              </div>
 
-              <p className="text-xl text-white/90 mb-8 leading-relaxed max-w-2xl mx-auto lg:mx-0">
+              {/* Main Heading with creative layout */}
+              <div>
+                <h4 className="font-bold text-forest-green leading-tight mb-4">
+                  Intelligent Learning
+                  <br />
+                  <span className="text-moss-green">Solutions</span> for{" "}
+                  <span className="relative inline-block">
+                    <span className="relative z-10">all</span>
+                    <span className="absolute bottom-1 left-0 w-full h-3 bg-sunbeam-yellow/30 -z-0"></span>
+                  </span>
+                </h4>
+              </div>
+
+              <p className="text-forest-green/80 max-w-2xl text-lg leading-relaxed">
                 From custom Learning Management System solutions for organisations to industry-ready bootcamps for learners, we enable communities and companies to thrive through accessible, future-focused learning opportunities.
               </p>
 
-              <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+              {/* CTA Buttons with icon */}
+              <div className="flex flex-col sm:flex-row gap-4 pt-4">
                 <Button
                   size="lg"
-                  className="bg-sunbeam-yellow text-forest-green hover:bg-sunbeam-yellow/90 shadow-medium font-semibold px-8 py-4 text-lg"
+                  className="bg-forest-green text-white hover:bg-forest-green/90 font-semibold px-8 py-6 rounded-2xl group"
                 >
                   Partner With Us
+                  <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
                 </Button>
                 <Button
                   variant="outline"
                   size="lg"
-                  className="border-white/30 text-white hover:bg-white hover:text-forest-green bg-white text-forest-green px-8 py-4 text-lg"
+                  className="border-2 border-forest-green text-forest-green hover:bg-forest-green hover:text-white px-8 py-6 rounded-2xl"
                   onClick={() => {
                     const impactSection = document.getElementById('impact');
                     if (impactSection) {
@@ -66,40 +95,64 @@ const Hero = () => {
                     }
                   }}
                 >
-                  Explore Our Platform
+                  Explore Platform
                 </Button>
               </div>
             </div>
 
-            <div className="relative hidden lg:block">
-              <div className="relative">
-                {/* Floating elements with animations */}
-                <div className="absolute -top-4 -left-4 w-20 h-20 bg-sunbeam-yellow/20 rounded-full animate-bounce"></div>
-                <div className="absolute -bottom-8 -right-8 w-16 h-16 bg-moss-green/20 rounded-full animate-pulse"></div>
-                <div className="absolute top-1/2 -left-8 w-12 h-12 bg-white/10 rounded-full animate-ping"></div>
+            {/* Right Content - Takes 5 columns - Floating Image Design */}
+            <div className="lg:col-span-5 relative hidden lg:block">
+              {/* Decorative elements */}
+              <div className="absolute -top-8 -right-8 w-72 h-72 bg-moss-green/5 rounded-full"></div>
+              <div className="absolute -bottom-8 -left-8 w-64 h-64 bg-sunbeam-yellow/5 rounded-full"></div>
 
-                <div className="absolute inset-0 bg-gradient-accent rounded-3xl blur-3xl opacity-30 transform rotate-6 animate-pulse"></div>
-                <div className="relative bg-white/10 backdrop-blur-md rounded-3xl p-8 border border-white/20 animate-fade-in">
-                  <div className="grid grid-cols-2 gap-6">
-                    <div className="text-center animate-scale-in">
-                      <div className="text-3xl font-bold text-white mb-2">6,000+</div>
-                      <div className="text-white/80 text-sm">Learners Trained</div>
-                    </div>
-                    <div className="text-center animate-scale-in" style={{animationDelay: '0.1s'}}>
-                      <div className="text-3xl font-bold text-white mb-2">18+</div>
-                      <div className="text-white/80 text-sm">States Reached</div>
-                    </div>
-                    <div className="text-center animate-scale-in" style={{animationDelay: '0.2s'}}>
-                      <div className="text-2xl font-bold text-white mb-2">90%</div>
-                      <div className="text-white/80 text-sm">completion rate</div>
-                    </div>
-                    <div className="text-center animate-scale-in" style={{animationDelay: '0.3s'}}>
-                      <div className="text-3xl font-bold text-white mb-2">500+</div>
-                      <div className="text-white/80 text-sm">Learners Placed</div>
-                    </div>
+              {/* Main Image with modern frame */}
+              <div className="relative">
+                <div className="relative p-2 bg-white rounded-3xl shadow-2xl transform hover:scale-[1.02] transition-transform duration-500">
+                  <div className="relative rounded-2xl overflow-hidden">
+                    <img
+                      src={heroBackgroundLearning}
+                      alt="Students learning together in collaborative environment"
+                      className="w-full h-auto object-cover"
+                      onError={(e) => {
+                        console.log('Hero background image failed to load');
+                        e.currentTarget.style.display = 'none';
+                      }}
+                      onLoad={() => {
+                        console.log('Hero background image loaded successfully');
+                      }}
+                    />
                   </div>
                 </div>
+
               </div>
+            </div>
+          </div>
+
+          {/* Bottom Metrics - Redesigned as cards with icons */}
+          <div className="grid grid-cols-2 lg:grid-cols-3 gap-6 mt-16 max-w-4xl mx-auto">
+            <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-6 border border-forest-green/10 hover:shadow-lg transition-all hover:-translate-y-1 duration-300">
+              <div className="w-10 h-10 bg-sunbeam-yellow/10 rounded-lg flex items-center justify-center mb-3">
+                <CheckCircle className="w-6 h-6 text-sunbeam-yellow" />
+              </div>
+              <h5 className="font-bold text-forest-green mb-1">18+</h5>
+              <p className="text-small text-forest-green/70">States Reached</p>
+            </div>
+
+            <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-6 border border-forest-green/10 hover:shadow-lg transition-all hover:-translate-y-1 duration-300">
+              <div className="w-10 h-10 bg-moss-green/10 rounded-lg flex items-center justify-center mb-3">
+                <CheckCircle className="w-6 h-6 text-moss-green" />
+              </div>
+              <h5 className="font-bold text-forest-green mb-1">90%</h5>
+              <p className="text-small text-forest-green/70">Completion Rate</p>
+            </div>
+
+            <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-6 border border-forest-green/10 hover:shadow-lg transition-all hover:-translate-y-1 duration-300">
+              <div className="w-10 h-10 bg-sunbeam-yellow/10 rounded-lg flex items-center justify-center mb-3">
+                <CheckCircle className="w-6 h-6 text-sunbeam-yellow" />
+              </div>
+              <h5 className="font-bold text-forest-green mb-1">500+</h5>
+              <p className="text-small text-forest-green/70">Learners Placed</p>
             </div>
           </div>
         </div>

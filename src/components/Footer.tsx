@@ -25,10 +25,10 @@ const Footer = () => {
           <div>
             <h4 className="font-semibold text-lg mb-4">Programs</h4>
             <ul className="space-y-3 text-white/80">
-              <li><a href="#" className="hover:text-white transition-colors">Tech Bootcamps</a></li>
-              <li><a href="#" className="hover:text-white transition-colors">Learning Solutions</a></li>
-              <li><a href="#" className="hover:text-white transition-colors">Partnerships</a></li>
-              <li><a href="#" className="hover:text-white transition-colors">Custom Training</a></li>
+              <li><a href="/#programs" className="hover:text-white transition-colors">Website Development</a></li>
+              <li><a href="/#programs" className="hover:text-white transition-colors">Artificial Intelligence</a></li>
+              <li><a href="/#programs" className="hover:text-white transition-colors">Data Science</a></li>
+              <li><a href="/#programs" className="hover:text-white transition-colors">Data Structures & Algorithm using Java</a></li>
             </ul>
           </div>
 
@@ -36,9 +36,8 @@ const Footer = () => {
           <div>
             <h4 className="font-semibold text-lg mb-4">Company</h4>
             <ul className="space-y-3 text-white/80">
-              <li><a href="#" className="hover:text-white transition-colors">About NavGurukul</a></li>
-              <li><a href="#" className="hover:text-white transition-colors">Success Stories</a></li>
-              <li><a href="#" className="hover:text-white transition-colors">Impact Report</a></li>
+              <li><a href="https://www.navgurukul.org/about" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">About NavGurukul</a></li>
+              <li><a href="/#testimonials" className="hover:text-white transition-colors">Success Stories</a></li>
               <li><a href="#" className="hover:text-white transition-colors">Contact Us</a></li>
             </ul>
           </div>

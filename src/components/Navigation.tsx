@@ -13,7 +13,7 @@ const Navigation = ({ currentPage = "" }: NavigationProps) => {
   return (
     <header className="fixed top-4 left-4 right-4 z-50">
       <nav className="container mx-auto">
-        <div className="bg-white/85 backdrop-blur-md border border-forest-green/10 rounded-3xl shadow-lg px-6 py-3">
+        <div className="bg-white/60 backdrop-blur-sm border border-forest-green/5 rounded-3xl shadow-md px-6 py-3">
           <div className="flex items-center justify-between">
             <div className="flex items-center space-x-3">
               <a href="/">

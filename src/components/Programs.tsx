@@ -96,8 +96,23 @@ const Programs = () => {
   ];
 
   return (
-    <section className="py-12 bg-background">
-      <div className="container mx-auto px-6">
+    <section id="programs" className="py-12 bg-background relative overflow-hidden">
+      {/* Floating geometric shapes for motion graphics */}
+      <div className="absolute inset-0 overflow-hidden pointer-events-none opacity-50">
+        {/* Circles */}
+        <div className="absolute top-10 right-[15%] w-20 h-20 border-2 border-moss-green/20 rounded-full animate-float" style={{animationDelay: '0s'}}></div>
+        <div className="absolute bottom-20 left-[10%] w-16 h-16 border-2 border-sunbeam-yellow/15 rounded-full animate-drift" style={{animationDelay: '2s'}}></div>
+
+        {/* Squares */}
+        <div className="absolute top-[40%] left-[5%] w-14 h-14 bg-forest-green/5 rounded-xl animate-float-slow" style={{animationDelay: '1s'}}></div>
+        <div className="absolute bottom-[30%] right-[8%] w-12 h-12 border-2 border-moss-green/15 rounded-lg animate-drift" style={{animationDelay: '3s'}}></div>
+
+        {/* Dots */}
+        <div className="absolute top-[25%] right-[25%] w-3 h-3 bg-sunbeam-yellow/25 rounded-full animate-pulse-subtle" style={{animationDelay: '0.5s'}}></div>
+        <div className="absolute bottom-[50%] left-[20%] w-4 h-4 bg-moss-green/20 rounded-full animate-pulse-subtle" style={{animationDelay: '2.5s'}}></div>
+      </div>
+
+      <div className="container mx-auto px-6 relative z-10">
         <div className="text-center mb-16">
           <h2 className="text-4xl lg:text-5xl font-bold text-foreground mb-6">
             Our Programs

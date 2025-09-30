@@ -55,49 +55,48 @@ const Testimonials = () => {
   const duplicatedTestimonials = [...testimonials, ...testimonials];
 
   return (
-    <section id="testimonials" className="py-24 bg-gradient-to-br from-light-beige to-pure-white overflow-hidden">
+    <section id="testimonials" className="py-24 bg-light-beige overflow-hidden">
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
-          <h2 className="text-4xl lg:text-5xl font-bold text-foreground mb-6">
+          <h5 className="font-bold text-forest-green mb-6">
             Success Stories
-          </h2>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+          </h5>
+          <p className="text-forest-green/70 max-w-3xl mx-auto">
             Real stories from real learners who transformed their careers through Zuvy's programs.
           </p>
         </div>
 
-        {/* Continuous moving testimonials */}
+        {/* Continuous moving testimonials with hover pause */}
         <div className="relative">
-          <div className="flex animate-scroll-left space-x-8 mb-8">
+          <div className="flex animate-scroll-left hover:[animation-play-state:paused] space-x-8 mb-8">
             {duplicatedTestimonials.map((testimonial, index) => (
-              <Card 
+              <Card
                 key={index}
-                className="flex-shrink-0 w-96 group relative overflow-hidden border-0 shadow-soft hover:shadow-medium transition-all duration-500 bg-pure-white"
+                className="flex-shrink-0 w-96 h-[500px] group relative overflow-hidden border-0 shadow-lg hover:shadow-2xl hover:scale-110 hover:h-auto transition-all duration-500 bg-white hover:z-10"
               >
-                <div className="absolute inset-0 bg-gradient-primary opacity-5 group-hover:opacity-10 transition-opacity duration-500"></div>
-                
-                <CardContent className="relative z-10 p-6">
+
+                <CardContent className="relative z-10 p-6 h-full flex flex-col">
                   <div className="flex items-center mb-4">
                     <div className="w-16 h-16 rounded-full overflow-hidden mr-4 border-2 border-moss-green/20">
-                      <img 
-                        src={testimonial.image} 
+                      <img
+                        src={testimonial.image}
                         alt={testimonial.name}
                         className="w-full h-full object-cover"
                       />
                     </div>
                     <div className="flex-1">
-                      <h4 className="font-semibold text-foreground">{testimonial.name}</h4>
-                      <p className="text-sm text-muted-foreground">{testimonial.placement}</p>
+                      <h6 className="font-semibold text-forest-green">{testimonial.name}</h6>
+                      <p className="text-small text-forest-green/70">{testimonial.placement}</p>
                       <div className="text-xs font-semibold text-moss-green bg-moss-green/10 px-2 py-1 rounded mt-1 inline-block">
                         {testimonial.highlight}
                       </div>
                     </div>
                     <Award className="w-6 h-6 text-sunbeam-yellow" />
                   </div>
-                  
-                  <div className="mb-4">
+
+                  <div className="mb-4 flex-1 overflow-hidden">
                     <Quote className="w-6 h-6 text-moss-green opacity-60 mb-2" />
-                    <p className="text-muted-foreground text-sm leading-relaxed line-clamp-4">
+                    <p className="text-forest-green/80 text-small leading-relaxed line-clamp-[12] group-hover:line-clamp-none">
                       "{testimonial.quote}"
                     </p>
                   </div>
