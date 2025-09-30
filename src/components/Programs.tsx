@@ -131,37 +131,37 @@ const Programs = () => {
               <div key={index} className="bg-white rounded-3xl shadow-lg border border-gray-100 overflow-hidden hover:shadow-xl transition-all duration-300">
                 {/* Program Header */}
                 <div
-                  className="p-8 cursor-pointer hover:bg-gradient-to-r hover:from-gray-50 hover:to-gray-100 transition-all duration-300"
+                  className="p-4 md:p-8 cursor-pointer hover:bg-gradient-to-r hover:from-gray-50 hover:to-gray-100 transition-all duration-300"
                   onClick={() => toggleDropdown(index)}
                 >
-                  <div className="flex items-center justify-between">
-                    <div className="flex items-center space-x-6">
+                  <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+                    <div className="flex items-start md:items-center space-x-4 md:space-x-6 flex-1">
                       {/* Program Icon */}
-                      <div className={`relative inline-flex items-center justify-center w-20 h-20 rounded-2xl bg-gradient-to-br ${program.gradient} shadow-lg group-hover:scale-105 transition-transform duration-300`}>
-                        <Icon className="w-10 h-10 text-white" />
+                      <div className={`relative inline-flex items-center justify-center w-16 h-16 md:w-20 md:h-20 rounded-2xl bg-gradient-to-br ${program.gradient} shadow-lg flex-shrink-0`}>
+                        <Icon className="w-8 h-8 md:w-10 md:h-10 text-white" />
                       </div>
 
                       {/* Program Info */}
-                      <div className="flex-1">
-                        <h3 className="text-2xl font-bold text-foreground mb-2">
+                      <div className="flex-1 min-w-0">
+                        <h3 className="text-xl md:text-2xl font-bold text-foreground mb-1 md:mb-2">
                           {program.title}
                         </h3>
-                        <p className="text-muted-foreground text-lg mb-3">
+                        <p className="text-muted-foreground text-sm md:text-lg mb-2 md:mb-3">
                           {program.description}
                         </p>
 
                         {/* Program Stats */}
-                        <div className="flex items-center space-x-6 text-sm">
-                          <div className="flex items-center space-x-2 text-muted-foreground">
-                            <Clock className="w-4 h-4" />
+                        <div className="flex flex-wrap items-center gap-3 md:gap-6 text-xs md:text-sm">
+                          <div className="flex items-center space-x-1 md:space-x-2 text-muted-foreground">
+                            <Clock className="w-3 h-3 md:w-4 md:h-4 flex-shrink-0" />
                             <span className="font-medium">{program.duration}</span>
                           </div>
-                          <div className="flex items-center space-x-2 text-muted-foreground">
-                            <Award className="w-4 h-4" />
+                          <div className="flex items-center space-x-1 md:space-x-2 text-muted-foreground">
+                            <Award className="w-3 h-3 md:w-4 md:h-4 flex-shrink-0" />
                             <span className="font-medium">{program.level}</span>
                           </div>
-                          <div className="flex items-center space-x-2 text-muted-foreground">
-                            <Users className="w-4 h-4" />
+                          <div className="flex items-center space-x-1 md:space-x-2 text-muted-foreground">
+                            <Users className="w-3 h-3 md:w-4 md:h-4 flex-shrink-0" />
                             <span className="font-medium">{program.students}</span>
                           </div>
                         </div>
@@ -169,9 +169,9 @@ const Programs = () => {
                     </div>
 
                     {/* Expand/Collapse Icon */}
-                    <div className="flex items-center space-x-4">
+                    <div className="flex items-center justify-between md:justify-end space-x-3 md:space-x-4">
                       <Button
-                        className={`bg-gradient-to-r ${program.gradient} text-white hover:shadow-lg transition-all duration-300 font-semibold px-6 py-3`}
+                        className={`bg-gradient-to-r ${program.gradient} text-white hover:shadow-lg transition-all duration-300 font-semibold px-4 py-2 md:px-6 md:py-3 text-sm md:text-base`}
                         onClick={(e) => {
                           e.stopPropagation();
                           // Handle enrollment
@@ -179,11 +179,11 @@ const Programs = () => {
                       >
                         Enroll Now
                       </Button>
-                      <div className={`p-2 rounded-full transition-all duration-300 ${isOpen ? 'bg-gray-100' : 'hover:bg-gray-100'}`}>
+                      <div className={`p-2 rounded-full transition-all duration-300 ${isOpen ? 'bg-gray-100' : 'hover:bg-gray-100'} flex-shrink-0`}>
                         {isOpen ? (
-                          <ChevronUp className="w-6 h-6 text-muted-foreground" />
+                          <ChevronUp className="w-5 h-5 md:w-6 md:h-6 text-muted-foreground" />
                         ) : (
-                          <ChevronDown className="w-6 h-6 text-muted-foreground" />
+                          <ChevronDown className="w-5 h-5 md:w-6 md:h-6 text-muted-foreground" />
                         )}
                       </div>
                     </div>

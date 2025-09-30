@@ -1,11 +1,20 @@
 import { Card, CardContent } from "@/components/ui/card";
-import { Quote, Award } from "lucide-react";
+import { Quote, Award, ChevronDown, ChevronUp } from "lucide-react";
+import { useState } from "react";
 import vaishnaviDeokarImg from "@/assets/student-vaishnavi-deokar.png";
 import varunGuleriaImg from "@/assets/student-varun-guleria.png";
 import asthaNegiImg from "@/assets/student-astha-negi.png";
 import ayushiShahiImg from "@/assets/student-ayushi-shahi.png";
 
 const Testimonials = () => {
+  const [expandedCards, setExpandedCards] = useState<{[key: number]: boolean}>({});
+
+  const toggleExpand = (index: number) => {
+    setExpandedCards(prev => ({
+      ...prev,
+      [index]: !prev[index]
+    }));
+  };
   const testimonials = [
     {
       name: "Vaishnavi Deokar",
@@ -69,40 +78,57 @@ const Testimonials = () => {
         {/* Continuous moving testimonials with hover pause */}
         <div className="relative">
           <div className="flex animate-scroll-left hover:[animation-play-state:paused] space-x-8 mb-8">
-            {duplicatedTestimonials.map((testimonial, index) => (
-              <Card
-                key={index}
-                className="flex-shrink-0 w-96 h-[500px] group relative overflow-hidden border-0 shadow-lg hover:shadow-2xl hover:scale-110 hover:h-auto transition-all duration-500 bg-white hover:z-10"
-              >
-
-                <CardContent className="relative z-10 p-6 h-full flex flex-col">
-                  <div className="flex items-center mb-4">
-                    <div className="w-16 h-16 rounded-full overflow-hidden mr-4 border-2 border-moss-green/20">
-                      <img
-                        src={testimonial.image}
-                        alt={testimonial.name}
-                        className="w-full h-full object-cover"
-                      />
-                    </div>
-                    <div className="flex-1">
-                      <h6 className="font-semibold text-forest-green">{testimonial.name}</h6>
-                      <p className="text-small text-forest-green/70">{testimonial.placement}</p>
-                      <div className="text-xs font-semibold text-moss-green bg-moss-green/10 px-2 py-1 rounded mt-1 inline-block">
-                        {testimonial.highlight}
+            {duplicatedTestimonials.map((testimonial, index) => {
+              const isExpanded = expandedCards[index];
+              return (
+                <Card
+                  key={index}
+                  className="flex-shrink-0 w-96 group relative overflow-hidden border-0 shadow-lg hover:shadow-2xl hover:scale-105 transition-all duration-500 bg-white hover:z-10"
+                >
+                  <CardContent className="relative z-10 p-6">
+                    <div className="flex items-center mb-4">
+                      <div className="w-16 h-16 rounded-full overflow-hidden mr-4 border-2 border-moss-green/20">
+                        <img
+                          src={testimonial.image}
+                          alt={testimonial.name}
+                          className="w-full h-full object-cover"
+                        />
                       </div>
+                      <div className="flex-1">
+                        <h4 className="font-semibold text-forest-green">{testimonial.name}</h4>
+                        <p className="text-forest-green/70">{testimonial.placement}</p>
+                        <div className="text-xs font-semibold text-moss-green bg-moss-green/10 px-2 py-1 rounded mt-1 inline-block">
+                          {testimonial.highlight}
+                        </div>
+                      </div>
+                      <Award className="w-6 h-6 text-sunbeam-yellow" />
                     </div>
-                    <Award className="w-6 h-6 text-sunbeam-yellow" />
-                  </div>
 
-                  <div className="mb-4 flex-1 overflow-hidden">
-                    <Quote className="w-6 h-6 text-moss-green opacity-60 mb-2" />
-                    <p className="text-forest-green/80 text-small leading-relaxed line-clamp-[12] group-hover:line-clamp-none">
-                      "{testimonial.quote}"
-                    </p>
-                  </div>
-                </CardContent>
-              </Card>
-            ))}
+                    <div className="mb-4">
+                      <Quote className="w-6 h-6 text-moss-green opacity-60 mb-2" />
+                      <p className={`text-forest-green/80 leading-relaxed ${isExpanded ? '' : 'line-clamp-4'}`}>
+                        "{testimonial.quote}"
+                      </p>
+                    </div>
+
+                    <button
+                      onClick={() => toggleExpand(index)}
+                      className="flex items-center gap-2 text-moss-green hover:text-forest-green font-semibold text-sm transition-colors"
+                    >
+                      {isExpanded ? (
+                        <>
+                          View Less <ChevronUp className="w-4 h-4" />
+                        </>
+                      ) : (
+                        <>
+                          View More <ChevronDown className="w-4 h-4" />
+                        </>
+                      )}
+                    </button>
+                  </CardContent>
+                </Card>
+              );
+            })}
           </div>
         </div>
 
