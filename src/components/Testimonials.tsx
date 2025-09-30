@@ -83,45 +83,45 @@ const Testimonials = () => {
               return (
                 <Card
                   key={index}
-                  className="flex-shrink-0 w-96 group relative overflow-hidden border-0 shadow-lg hover:shadow-2xl hover:scale-105 transition-all duration-500 bg-white hover:z-10"
+                  className={`flex-shrink-0 w-80 group relative overflow-hidden border-0 shadow-lg hover:shadow-2xl hover:scale-105 transition-all duration-500 bg-white hover:z-10 ${isExpanded ? 'h-auto' : 'h-[380px]'}`}
                 >
-                  <CardContent className="relative z-10 p-6">
-                    <div className="flex items-center mb-4">
-                      <div className="w-16 h-16 rounded-full overflow-hidden mr-4 border-2 border-moss-green/20">
+                  <CardContent className="relative z-10 p-5 h-full flex flex-col">
+                    <div className="flex items-center mb-3">
+                      <div className="w-12 h-12 rounded-full overflow-hidden mr-3 border-2 border-moss-green/20 flex-shrink-0">
                         <img
                           src={testimonial.image}
                           alt={testimonial.name}
                           className="w-full h-full object-cover"
                         />
                       </div>
-                      <div className="flex-1">
-                        <h4 className="font-semibold text-forest-green">{testimonial.name}</h4>
-                        <p className="text-forest-green/70">{testimonial.placement}</p>
-                        <div className="text-xs font-semibold text-moss-green bg-moss-green/10 px-2 py-1 rounded mt-1 inline-block">
+                      <div className="flex-1 min-w-0">
+                        <h6 className="font-semibold text-forest-green text-base truncate">{testimonial.name}</h6>
+                        <p className="text-sm text-forest-green/70">{testimonial.placement}</p>
+                        <div className="text-xs font-semibold text-moss-green bg-moss-green/10 px-2 py-0.5 rounded mt-1 inline-block">
                           {testimonial.highlight}
                         </div>
                       </div>
-                      <Award className="w-6 h-6 text-sunbeam-yellow" />
+                      <Award className="w-5 h-5 text-sunbeam-yellow flex-shrink-0 ml-2" />
                     </div>
 
-                    <div className="mb-4">
-                      <Quote className="w-6 h-6 text-moss-green opacity-60 mb-2" />
-                      <p className={`text-forest-green/80 leading-relaxed ${isExpanded ? '' : 'line-clamp-4'}`}>
+                    <div className="mb-3 flex-1 overflow-hidden">
+                      <Quote className="w-5 h-5 text-moss-green opacity-60 mb-2" />
+                      <p className={`text-forest-green/80 leading-relaxed text-sm ${isExpanded ? '' : 'line-clamp-6'}`}>
                         "{testimonial.quote}"
                       </p>
                     </div>
 
                     <button
                       onClick={() => toggleExpand(index)}
-                      className="flex items-center gap-2 text-moss-green hover:text-forest-green font-semibold text-sm transition-colors"
+                      className="flex items-center gap-1 text-moss-green hover:text-forest-green font-semibold text-xs transition-colors self-start"
                     >
                       {isExpanded ? (
                         <>
-                          View Less <ChevronUp className="w-4 h-4" />
+                          View Less <ChevronUp className="w-3 h-3" />
                         </>
                       ) : (
                         <>
-                          View More <ChevronDown className="w-4 h-4" />
+                          View More <ChevronDown className="w-3 h-3" />
                         </>
                       )}
                     </button>
@@ -142,10 +142,10 @@ const Testimonials = () => {
               Join thousands of learners who have transformed their careers with Zuvy.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-gradient-primary text-white px-6 py-3 rounded-lg font-semibold hover:shadow-medium transition-all duration-300">
+              <button className="bg-forest-green text-white px-6 py-3 rounded-lg font-semibold hover:bg-forest-green/90 hover:shadow-medium transition-all duration-300">
                 Start Your Journey
               </button>
-              <button className="border border-border bg-white text-forest-green px-6 py-3 rounded-lg font-semibold hover:bg-muted transition-all duration-300">
+              <button className="border-2 border-forest-green bg-white text-forest-green px-6 py-3 rounded-lg font-semibold hover:bg-forest-green hover:text-white transition-all duration-300">
                 Learn More
               </button>
             </div>
