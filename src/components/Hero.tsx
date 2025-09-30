@@ -53,9 +53,8 @@ const Hero = () => {
                 <h4 className="font-bold text-forest-green leading-tight mb-4">
                   Intelligent Learning
                   <br />
-                  <span className="text-moss-green">Solutions</span> for{" "}
                   <span className="relative inline-block">
-                    <span className="relative z-10">all</span>
+                    <span className="relative z-10">Solutions for all</span>
                     <span className="absolute bottom-1 left-0 w-full h-3 bg-sunbeam-yellow/30 -z-0"></span>
                   </span>
                 </h4>

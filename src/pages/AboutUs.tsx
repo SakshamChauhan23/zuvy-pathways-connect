@@ -2,7 +2,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
-import { Target, Lightbulb, Heart, Rocket } from "lucide-react";
+import { Target, Lightbulb, Users, Rocket } from "lucide-react";
 import aboutHeroBg from "@/assets/about-hero-bg.jpg";
 import teamPhoto from "@/assets/team-photo.jpg";
 
@@ -31,7 +31,7 @@ const AboutUs = () => {
         <div className="container mx-auto px-6 relative z-10">
           <div className="text-center mb-12">
             <div className="inline-flex items-center justify-center w-16 h-16 bg-white/20 backdrop-blur-sm rounded-3xl mb-6">
-              <Heart className="w-8 h-8 text-white" />
+              <Users className="w-8 h-8 text-white" />
             </div>
             <h2 className="font-bold text-white mb-6">
               About Zuvy

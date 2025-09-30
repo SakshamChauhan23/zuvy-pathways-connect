@@ -27,12 +27,12 @@ const FeatureCard = ({ feature, index, isEven }: {
       {/* Content Side */}
       <div className="flex-1 text-center lg:text-left">
         <div className="flex items-center justify-center lg:justify-start mb-6">
-          <div className={`inline-flex items-center justify-center w-20 h-20 rounded-3xl bg-gradient-to-br ${feature.gradient} shadow-strong`}>
+          <div className="inline-flex items-center justify-center w-20 h-20 rounded-3xl bg-moss-green shadow-strong">
             <Icon className="w-10 h-10 text-white" />
           </div>
           <div className="ml-6 hidden lg:block">
             <div className="text-sm text-muted-foreground font-medium mb-1">Feature {String(index + 1).padStart(2, '0')}</div>
-            <div className="w-16 h-1 bg-gradient-to-r from-forest-green to-moss-green rounded-full"></div>
+            <div className="w-16 h-1 bg-forest-green rounded-full"></div>
           </div>
         </div>
 
@@ -45,7 +45,7 @@ const FeatureCard = ({ feature, index, isEven }: {
         </p>
 
         <div className="flex items-center justify-center lg:justify-start">
-          <div className={`px-4 py-2 rounded-full bg-gradient-to-r ${feature.gradient} text-white text-sm font-semibold shadow-medium`}>
+          <div className="px-4 py-2 rounded-full bg-forest-green text-white text-sm font-semibold shadow-medium">
             ✓ Industry Standard
           </div>
         </div>
@@ -66,7 +66,7 @@ const FeatureCard = ({ feature, index, isEven }: {
                   />
                 ) : (
                   // Fallback when image fails to load
-                  <div className={`w-full h-full bg-gradient-to-br ${feature.gradient} flex items-center justify-center`}>
+                  <div className="w-full h-full bg-moss-green flex items-center justify-center">
                     <div className="text-center text-white">
                       <div className="w-16 h-16 mx-auto mb-4 flex items-center justify-center">
                         <Icon className="w-12 h-12" />
@@ -189,7 +189,7 @@ const Impact = () => {
   ];
 
   return (
-    <section id="impact" className="py-24 bg-gradient-to-br from-pure-white to-light-beige">
+    <section id="impact" className="py-24 bg-light-beige">
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
           <h2 className="text-4xl lg:text-5xl font-bold text-foreground mb-6">
@@ -214,7 +214,6 @@ const Impact = () => {
 
         {/* Enhanced visual element */}
         <div className="mt-16 relative">
-          <div className="absolute inset-0 bg-gradient-primary rounded-3xl opacity-5"></div>
           <div className="relative bg-pure-white rounded-3xl p-8 border border-border shadow-medium">
             <div className="text-center">
               <h3 className="text-2xl font-bold text-foreground mb-4">

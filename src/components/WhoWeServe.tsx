@@ -33,7 +33,7 @@ const WhoWeServe = () => {
     {
       icon: Handshake,
       title: "Zuvy Partnerships",
-      subtitle: "For Funders & Employers",
+      subtitle: "For CSR Partners & Employers",
       description: "Sponsor underserved learners, access a diverse job-ready talent pool, and collaborate on impactful education initiatives.",
       features: [
         "Sponsor underserved learners",
@@ -50,7 +50,7 @@ const WhoWeServe = () => {
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
           <h2 className="text-4xl lg:text-5xl font-bold text-foreground mb-6">
-            Who We Serve
+            Find your Path
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
             Whether you're an individual looking to upskill, an organization seeking training solutions, or a partner wanting to create impact, we have the perfect program for you.
@@ -65,10 +65,8 @@ const WhoWeServe = () => {
                 key={index}
                 className="group relative overflow-hidden border-0 shadow-soft hover:shadow-medium transition-all duration-500 hover:-translate-y-2 bg-pure-white h-full flex flex-col"
               >
-                <div className={`absolute inset-0 bg-gradient-to-br ${program.gradient} opacity-5 group-hover:opacity-10 transition-opacity duration-500`}></div>
-
                 <CardHeader className="relative z-10 pb-4">
-                  <div className={`inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-gradient-to-br ${program.gradient} mb-4 shadow-medium group-hover:scale-110 transition-transform duration-300`}>
+                  <div className="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-moss-green mb-4 shadow-medium group-hover:scale-110 transition-transform duration-300">
                     <Icon className="w-8 h-8 text-white" />
                   </div>
 
@@ -76,7 +74,7 @@ const WhoWeServe = () => {
                     {program.title}
                   </CardTitle>
 
-                  <div className={`text-sm font-semibold bg-gradient-to-r ${program.gradient} bg-clip-text text-transparent`}>
+                  <div className="text-sm font-semibold text-forest-green">
                     {program.subtitle}
                   </div>
                 </CardHeader>
@@ -96,7 +94,7 @@ const WhoWeServe = () => {
                   </ul>
 
                   <Button
-                    className={`w-full bg-gradient-to-r ${program.gradient} text-white hover:shadow-medium transition-all duration-300 font-semibold mt-auto`}
+                    className="w-full bg-forest-green text-white hover:bg-forest-green/90 hover:shadow-medium transition-all duration-300 font-semibold mt-auto"
                   >
                     {program.cta}
                   </Button>
