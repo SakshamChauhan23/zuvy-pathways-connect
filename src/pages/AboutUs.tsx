@@ -177,7 +177,7 @@ const AboutUs = () => {
           {/* Video Section */}
           <section className="mb-24">
             <div className="text-center mb-12">
-              <h5 className="font-bold text-forest-green mb-4">See Zuvy in Action</h5>
+              <h5 className="font-bold text-forest-green mb-4">Our Impact in Action</h5>
               <p className="text-forest-green/70 max-w-3xl mx-auto">
                 Watch how we're transforming lives through technology education
               </p>
@@ -186,12 +186,12 @@ const AboutUs = () => {
             <div className="bg-white rounded-3xl shadow-lg p-4 max-w-5xl mx-auto">
               <div className="relative pb-[56.25%] h-0 overflow-hidden rounded-2xl">
                 <iframe
-                  src="https://drive.google.com/file/d/12N8iqpua2TF4MnguUf8sWEMblCXaYUo9/preview"
+                  src="https://www.youtube.com/embed/ryv-NmCAXfk"
                   className="absolute top-0 left-0 w-full h-full"
-                  allow="autoplay"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                   allowFullScreen
                   loading="lazy"
-                  title="Zuvy Platform Video"
+                  title="Zuvy Impact Video"
                 ></iframe>
               </div>
             </div>

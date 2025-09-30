@@ -95,11 +95,11 @@ const Hero = () => {
 
             {/* Right Content - Takes 5 columns - Image Collage */}
             <div className="lg:col-span-5 relative hidden lg:block">
-              {/* Image Collage Grid */}
-              <div className="grid grid-cols-2 gap-3">
+              {/* Image Collage Grid - Fixed height */}
+              <div className="grid grid-cols-2 gap-3 h-[450px]">
                 {/* Large image top-left */}
                 <div className="col-span-1 row-span-2">
-                  <div className="relative h-full p-2 bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300">
+                  <div className="relative h-full p-2 bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 animate-float-slow">
                     <img
                       src={heroBackgroundLearning}
                       alt="Collaborative Learning"
@@ -110,7 +110,7 @@ const Hero = () => {
 
                 {/* Small image top-right */}
                 <div className="col-span-1">
-                  <div className="relative h-full p-2 bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300">
+                  <div className="relative h-full p-2 bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 animate-float" style={{animationDelay: '0.5s'}}>
                     <img
                       src={collage1}
                       alt="Student Success"
@@ -121,7 +121,7 @@ const Hero = () => {
 
                 {/* Small image middle-right */}
                 <div className="col-span-1">
-                  <div className="relative h-full p-2 bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300">
+                  <div className="relative h-full p-2 bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 animate-float" style={{animationDelay: '1s'}}>
                     <img
                       src={collage2}
                       alt="Learning Together"
@@ -132,7 +132,7 @@ const Hero = () => {
 
                 {/* Bottom row - two small images */}
                 <div className="col-span-1">
-                  <div className="relative h-full p-2 bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300">
+                  <div className="relative h-full p-2 bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 animate-float-slow" style={{animationDelay: '1.5s'}}>
                     <img
                       src={collage3}
                       alt="Tech Education"
@@ -142,7 +142,7 @@ const Hero = () => {
                 </div>
 
                 <div className="col-span-1">
-                  <div className="relative h-full p-2 bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300">
+                  <div className="relative h-full p-2 bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 animate-float" style={{animationDelay: '2s'}}>
                     <img
                       src={collage4}
                       alt="Zuvy Community"
