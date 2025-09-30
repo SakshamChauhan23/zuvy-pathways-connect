@@ -4,10 +4,6 @@ import { ArrowRight } from "lucide-react";
 const FinalCTA = () => {
   return (
     <section className="py-24 bg-light-beige relative overflow-hidden">
-      {/* Background pattern */}
-      <div className="absolute inset-0 opacity-40">
-        <div className="absolute inset-0 bg-gradient-to-br from-forest-green/10 to-moss-green/10"></div>
-      </div>
 
       {/* Floating geometric shapes for motion graphics */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
@@ -45,10 +41,9 @@ const FinalCTA = () => {
         {/* Redesigned Contact CTA Section */}
         <div className="max-w-4xl mx-auto">
           <div className="relative group">
-            <div className="absolute inset-0 bg-gradient-to-br from-moss-green/20 to-sunbeam-yellow/20 rounded-3xl blur-2xl"></div>
             <div className="relative bg-white rounded-3xl p-12 border border-forest-green/10 text-center group-hover:-translate-y-2 transition-all duration-500 shadow-xl">
-              <div className="w-20 h-20 bg-gradient-to-br from-sunbeam-yellow to-moss-green rounded-2xl mx-auto mb-6 flex items-center justify-center shadow-lg">
-                <ArrowRight className="w-10 h-10 text-white" />
+              <div className="w-20 h-20 bg-sunbeam-yellow rounded-2xl mx-auto mb-6 flex items-center justify-center shadow-lg">
+                <ArrowRight className="w-10 h-10 text-forest-green" />
               </div>
 
               <h3 className="text-3xl lg:text-4xl font-bold text-forest-green mb-6">

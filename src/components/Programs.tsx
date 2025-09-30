@@ -137,7 +137,7 @@ const Programs = () => {
                   <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
                     <div className="flex items-start md:items-center space-x-4 md:space-x-6 flex-1">
                       {/* Program Icon */}
-                      <div className={`relative inline-flex items-center justify-center w-16 h-16 md:w-20 md:h-20 rounded-2xl bg-gradient-to-br ${program.gradient} shadow-lg flex-shrink-0`}>
+                      <div className="relative inline-flex items-center justify-center w-16 h-16 md:w-20 md:h-20 rounded-2xl bg-moss-green shadow-lg flex-shrink-0">
                         <Icon className="w-8 h-8 md:w-10 md:h-10 text-white" />
                       </div>
 
@@ -171,7 +171,7 @@ const Programs = () => {
                     {/* Expand/Collapse Icon */}
                     <div className="flex items-center justify-between md:justify-end space-x-3 md:space-x-4">
                       <Button
-                        className={`bg-gradient-to-r ${program.gradient} text-white hover:shadow-lg transition-all duration-300 font-semibold px-4 py-2 md:px-6 md:py-3 text-sm md:text-base`}
+                        className="bg-forest-green text-white hover:bg-forest-green/90 hover:shadow-lg transition-all duration-300 font-semibold px-4 py-2 md:px-6 md:py-3 text-sm md:text-base"
                         onClick={(e) => {
                           e.stopPropagation();
                           // Handle enrollment
@@ -192,7 +192,7 @@ const Programs = () => {
 
                 {/* Dropdown Content - Curriculum */}
                 {isOpen && (
-                  <div className="border-t border-gray-100 bg-gradient-to-br from-gray-50/50 to-white">
+                  <div className="border-t border-gray-100 bg-gray-50">
                     <div className="p-8">
                       <div className="mb-6">
                         <h4 className="text-xl font-bold text-foreground mb-2 flex items-center">

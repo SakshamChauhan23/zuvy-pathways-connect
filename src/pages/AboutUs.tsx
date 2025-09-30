@@ -19,6 +19,7 @@ const AboutUs = () => {
             src={aboutHeroBg}
             alt="Zuvy Learning Environment"
             className="w-full h-full object-cover"
+            loading="lazy"
             onError={(e) => {
               e.currentTarget.style.display = 'none';
             }}
@@ -139,6 +140,7 @@ const AboutUs = () => {
                     src={teamPhoto}
                     alt="Zuvy Team"
                     className="w-full h-full object-cover"
+                    loading="lazy"
                     onError={(e) => {
                       e.currentTarget.style.display = 'none';
                     }}
@@ -188,6 +190,7 @@ const AboutUs = () => {
                   className="absolute top-0 left-0 w-full h-full"
                   allow="autoplay"
                   allowFullScreen
+                  loading="lazy"
                   title="Zuvy Platform Video"
                 ></iframe>
               </div>
@@ -197,7 +200,7 @@ const AboutUs = () => {
           {/* Call to Action */}
           <section className="text-center">
             <div className="bg-white rounded-3xl shadow-lg p-12 lg:p-16">
-              <div className="inline-flex items-center justify-center w-20 h-20 bg-forest-green rounded-3xl mb-8 shadow-lg">
+              <div className="inline-flex items-center justify-center w-20 h-20 bg-moss-green rounded-3xl mb-8 shadow-lg">
                 <Rocket className="w-10 h-10 text-white" />
               </div>
 

@@ -9,16 +9,6 @@ const Hero = () => {
       <Navigation />
 
       <section className="relative min-h-screen flex items-center overflow-hidden pt-24 bg-light-beige">
-        {/* Gradient Background - Asymmetric design */}
-        <div className="absolute top-0 left-0 w-[60%] h-full bg-gradient-to-br from-[#E8F5E9] via-[#FFF9C4] to-transparent opacity-60"></div>
-        <div className="absolute top-0 right-0 w-[50%] h-[80%] bg-gradient-to-bl from-[#FFE0B2] via-[#FFF9C4] to-transparent opacity-50"></div>
-
-        {/* Animated gradient blobs with motion */}
-        <div className="absolute inset-0 overflow-hidden pointer-events-none">
-          <div className="absolute -top-20 -left-20 w-[500px] h-[500px] bg-gradient-to-br from-moss-green/15 to-transparent rounded-full blur-3xl animate-pulse"></div>
-          <div className="absolute top-1/3 right-10 w-[400px] h-[400px] bg-gradient-to-bl from-sunbeam-yellow/20 to-transparent rounded-full blur-3xl animate-pulse" style={{animationDelay: '1.5s'}}></div>
-          <div className="absolute bottom-10 left-1/4 w-[350px] h-[350px] bg-gradient-to-tr from-forest-green/10 to-transparent rounded-full blur-3xl animate-pulse" style={{animationDelay: '3s'}}></div>
-        </div>
 
         {/* Floating geometric shapes for motion graphics */}
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
