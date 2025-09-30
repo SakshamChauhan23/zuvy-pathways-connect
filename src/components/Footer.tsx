@@ -9,7 +9,7 @@ const Footer = () => {
           {/* Brand */}
           <div className="md:col-span-2">
             <div className="flex items-center space-x-3 mb-6">
-              <img src={zuvyLogo} alt="Zuvy" className="h-8 w-auto brightness-0 invert" />
+              <img src={zuvyLogo} alt="Zuvy" className="h-12 w-auto brightness-0 invert" />
             </div>
             <p className="text-white/80 mb-6 max-w-md leading-relaxed">
               Intelligent learning solutions bridging the gap between education and employability. 

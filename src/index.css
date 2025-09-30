@@ -37,8 +37,8 @@ All colors MUST be HSL.
     --ring: 120 37% 27%;
 
     /* Custom Zuvy design tokens */
-    --forest-green: 120 37% 27%; /* #2C5F2D */
-    --moss-green: 79 35% 56%; /* #97BC62 */
+    --forest-green: 120 37% 35%; /* Lighter shade of green */
+    --moss-green: 79 35% 64%; /* Lighter shade of moss green */
     --sunbeam-yellow: 36 89% 63%; /* #F5AC50 */
     --light-beige: 44 30% 96%; /* #F5F4ED */
     --pure-white: 0 0% 100%; /* #FFFFFF */
