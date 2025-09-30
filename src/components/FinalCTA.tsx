@@ -42,8 +42,8 @@ const FinalCTA = () => {
         <div className="max-w-4xl mx-auto">
           <div className="relative group">
             <div className="relative bg-white rounded-3xl p-12 border border-forest-green/10 text-center group-hover:-translate-y-2 transition-all duration-500 shadow-xl">
-              <div className="w-20 h-20 bg-sunbeam-yellow rounded-2xl mx-auto mb-6 flex items-center justify-center shadow-lg">
-                <ArrowRight className="w-10 h-10 text-forest-green" />
+              <div className="w-20 h-20 bg-moss-green rounded-2xl mx-auto mb-6 flex items-center justify-center shadow-lg">
+                <ArrowRight className="w-10 h-10 text-white" />
               </div>
 
               <h3 className="text-3xl lg:text-4xl font-bold text-forest-green mb-6">
@@ -58,7 +58,7 @@ const FinalCTA = () => {
               <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
                 <Button
                   size="lg"
-                  className="bg-sunbeam-yellow text-forest-green hover:bg-sunbeam-yellow/90 font-semibold px-8 py-4 text-lg shadow-md"
+                  className="bg-forest-green text-white hover:bg-forest-green/90 font-semibold px-8 py-4 text-lg shadow-md"
                 >
                   Contact Us Today
                 </Button>

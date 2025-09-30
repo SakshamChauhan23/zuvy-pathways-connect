@@ -66,17 +66,17 @@ const Navigation = ({ currentPage = "" }: NavigationProps) => {
 
             {/* Mobile Menu Button */}
             <div className="lg:hidden">
-              <Button
-                variant="ghost"
-                className="text-forest-green hover:bg-forest-green/10 rounded-2xl p-2"
+              <button
+                className="text-forest-green hover:bg-forest-green/10 rounded-2xl p-2 transition-colors"
                 onClick={toggleMobileMenu}
+                aria-label="Toggle menu"
               >
                 {isMobileMenuOpen ? (
                   <X className="w-6 h-6" />
                 ) : (
                   <Menu className="w-6 h-6" />
                 )}
-              </Button>
+              </button>
             </div>
           </div>
 

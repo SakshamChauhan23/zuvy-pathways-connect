@@ -92,12 +92,6 @@ const WhoWeServe = () => {
                       </li>
                     ))}
                   </ul>
-
-                  <Button
-                    className="w-full bg-forest-green text-white hover:bg-forest-green/90 hover:shadow-medium transition-all duration-300 font-semibold mt-auto"
-                  >
-                    {program.cta}
-                  </Button>
                 </CardContent>
               </Card>
             );

@@ -169,16 +169,7 @@ const Programs = () => {
                     </div>
 
                     {/* Expand/Collapse Icon */}
-                    <div className="flex items-center justify-between md:justify-end space-x-3 md:space-x-4">
-                      <Button
-                        className="bg-forest-green text-white hover:bg-forest-green/90 hover:shadow-lg transition-all duration-300 font-semibold px-4 py-2 md:px-6 md:py-3 text-sm md:text-base"
-                        onClick={(e) => {
-                          e.stopPropagation();
-                          // Handle enrollment
-                        }}
-                      >
-                        Enroll Now
-                      </Button>
+                    <div className="flex items-center justify-end">
                       <div className={`p-2 rounded-full transition-all duration-300 ${isOpen ? 'bg-gray-100' : 'hover:bg-gray-100'} flex-shrink-0`}>
                         {isOpen ? (
                           <ChevronUp className="w-5 h-5 md:w-6 md:h-6 text-muted-foreground" />

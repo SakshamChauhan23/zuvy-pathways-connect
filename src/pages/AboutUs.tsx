@@ -106,7 +106,7 @@ const AboutUs = () => {
               {/* Our Vision */}
               <Card className="border-0 shadow-lg bg-white overflow-hidden group hover:shadow-xl transition-all duration-500">
                 <CardContent className="p-10 relative">
-                  <div className="absolute top-6 right-6 w-16 h-16 bg-sunbeam-yellow/20 rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                  <div className="absolute top-6 right-6 w-16 h-16 bg-moss-green/20 rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
                     <Lightbulb className="w-8 h-8 text-forest-green" />
                   </div>
                   <h5 className="font-bold text-forest-green mb-6">Our Vision</h5>
@@ -116,7 +116,7 @@ const AboutUs = () => {
                     to build a meaningful career in tech.
                   </p>
                   <div className="mt-8 flex items-center">
-                    <div className="w-12 h-1 bg-sunbeam-yellow rounded-full"></div>
+                    <div className="w-12 h-1 bg-moss-green rounded-full"></div>
                   </div>
                 </CardContent>
               </Card>
@@ -215,7 +215,7 @@ const AboutUs = () => {
               <div className="flex flex-col sm:flex-row gap-6 justify-center max-w-md mx-auto">
                 <Button
                   size="lg"
-                  className="bg-sunbeam-yellow text-forest-green hover:bg-sunbeam-yellow/90 shadow-lg font-bold px-10 py-6 rounded-2xl transform hover:scale-105 transition-all duration-300"
+                  className="bg-forest-green text-white hover:bg-forest-green/90 shadow-lg font-bold px-10 py-6 rounded-2xl transform hover:scale-105 transition-all duration-300"
                   onClick={() => window.location.href = "/#programs"}
                 >
                   Explore Programs

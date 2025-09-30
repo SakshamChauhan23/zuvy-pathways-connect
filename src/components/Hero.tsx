@@ -1,6 +1,10 @@
 import { Button } from "@/components/ui/button";
 import Navigation from "@/components/Navigation";
 import heroBackgroundLearning from "@/assets/hero-background-learning.png";
+import collage1 from "@/assets/collage-1.jpg";
+import collage2 from "@/assets/collage-2.jpg";
+import collage3 from "@/assets/collage-3.jpg";
+import collage4 from "@/assets/collage-4.jpg";
 import { ArrowRight, CheckCircle } from "lucide-react";
 
 const Hero = () => {
@@ -89,31 +93,63 @@ const Hero = () => {
               </div>
             </div>
 
-            {/* Right Content - Takes 5 columns - Floating Image Design */}
+            {/* Right Content - Takes 5 columns - Image Collage */}
             <div className="lg:col-span-5 relative hidden lg:block">
-              {/* Decorative elements */}
-              <div className="absolute -top-8 -right-8 w-72 h-72 bg-moss-green/5 rounded-full"></div>
-              <div className="absolute -bottom-8 -left-8 w-64 h-64 bg-sunbeam-yellow/5 rounded-full"></div>
-
-              {/* Main Image with modern frame */}
-              <div className="relative">
-                <div className="relative p-2 bg-white rounded-3xl shadow-2xl transform hover:scale-[1.02] transition-transform duration-500">
-                  <div className="relative rounded-2xl overflow-hidden">
+              {/* Image Collage Grid */}
+              <div className="grid grid-cols-2 gap-3">
+                {/* Large image top-left */}
+                <div className="col-span-1 row-span-2">
+                  <div className="relative h-full p-2 bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300">
                     <img
                       src={heroBackgroundLearning}
-                      alt="Students learning together in collaborative environment"
-                      className="w-full h-auto object-cover"
-                      onError={(e) => {
-                        console.log('Hero background image failed to load');
-                        e.currentTarget.style.display = 'none';
-                      }}
-                      onLoad={() => {
-                        console.log('Hero background image loaded successfully');
-                      }}
+                      alt="Collaborative Learning"
+                      className="w-full h-full object-cover rounded-xl"
                     />
                   </div>
                 </div>
 
+                {/* Small image top-right */}
+                <div className="col-span-1">
+                  <div className="relative h-full p-2 bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300">
+                    <img
+                      src={collage1}
+                      alt="Student Success"
+                      className="w-full h-full object-cover rounded-xl"
+                    />
+                  </div>
+                </div>
+
+                {/* Small image middle-right */}
+                <div className="col-span-1">
+                  <div className="relative h-full p-2 bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300">
+                    <img
+                      src={collage2}
+                      alt="Learning Together"
+                      className="w-full h-full object-cover rounded-xl"
+                    />
+                  </div>
+                </div>
+
+                {/* Bottom row - two small images */}
+                <div className="col-span-1">
+                  <div className="relative h-full p-2 bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300">
+                    <img
+                      src={collage3}
+                      alt="Tech Education"
+                      className="w-full h-full object-cover rounded-xl"
+                    />
+                  </div>
+                </div>
+
+                <div className="col-span-1">
+                  <div className="relative h-full p-2 bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300">
+                    <img
+                      src={collage4}
+                      alt="Zuvy Community"
+                      className="w-full h-full object-cover rounded-xl"
+                    />
+                  </div>
+                </div>
               </div>
             </div>
           </div>
