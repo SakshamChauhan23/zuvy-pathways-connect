@@ -44,11 +44,6 @@ const FeatureCard = ({ feature, index, isEven }: {
           {feature.description}
         </p>
 
-        <div className="flex items-center justify-center lg:justify-start">
-          <div className="px-4 py-2 rounded-full bg-forest-green text-white text-sm font-semibold shadow-medium">
-            ✓ Industry Standard
-          </div>
-        </div>
       </div>
 
       {/* Visual Side - Screenshot Display */}
@@ -157,7 +152,7 @@ const Impact = () => {
         { value: "4K", label: "Video Quality", color: "text-moss-green" },
         { value: "Interactive", label: "Live Sessions", color: "text-sunbeam-yellow" },
         { value: "Automatic", label: "Recording", color: "text-forest-green" },
-        { value: "Unlimited", label: "Replay Access", color: "text-moss-green" }
+        { value: "Multilingual", label: "Language Support", color: "text-moss-green" }
       ]
     },
     {
@@ -189,7 +184,7 @@ const Impact = () => {
   ];
 
   return (
-    <section id="impact" className="py-24 bg-light-beige">
+    <section id="impact" className="py-20 bg-light-beige">
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
           <h2 className="text-4xl lg:text-5xl font-bold text-foreground mb-6">

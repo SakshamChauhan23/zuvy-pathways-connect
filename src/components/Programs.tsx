@@ -96,7 +96,7 @@ const Programs = () => {
   ];
 
   return (
-    <section id="programs" className="py-12 bg-background relative overflow-hidden">
+    <section id="programs" className="py-20 bg-background relative overflow-hidden">
       {/* Floating geometric shapes for motion graphics */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none opacity-50">
         {/* Circles */}

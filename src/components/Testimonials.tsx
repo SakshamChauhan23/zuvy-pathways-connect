@@ -64,7 +64,7 @@ const Testimonials = () => {
   const duplicatedTestimonials = [...testimonials, ...testimonials];
 
   return (
-    <section id="testimonials" className="py-24 bg-light-beige overflow-hidden">
+    <section id="testimonials" className="py-20 bg-light-beige overflow-hidden">
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
           <h5 className="font-bold text-forest-green mb-6">
@@ -129,26 +129,6 @@ const Testimonials = () => {
                 </Card>
               );
             })}
-          </div>
-        </div>
-
-        {/* Call to action */}
-        <div className="text-center mt-16">
-          <div className="inline-block bg-pure-white rounded-3xl p-8 shadow-medium border border-border">
-            <h3 className="text-2xl font-bold text-foreground mb-4">
-              Ready to Write Your Success Story?
-            </h3>
-            <p className="text-muted-foreground mb-6 max-w-md">
-              Join thousands of learners who have transformed their careers with Zuvy.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-forest-green text-white px-6 py-3 rounded-lg font-semibold hover:bg-forest-green/90 hover:shadow-medium transition-all duration-300">
-                Start Your Journey
-              </button>
-              <button className="border-2 border-forest-green bg-white text-forest-green px-6 py-3 rounded-lg font-semibold hover:bg-forest-green hover:text-white transition-all duration-300">
-                Learn More
-              </button>
-            </div>
           </div>
         </div>
       </div>

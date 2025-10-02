@@ -68,10 +68,10 @@ const Hero = () => {
               <div className="flex flex-col sm:flex-row gap-4 pt-4">
                 <Button
                   size="lg"
-                  className="bg-forest-green text-white hover:bg-forest-green/90 font-semibold px-8 py-6 rounded-2xl group"
+                  className="bg-forest-green text-white hover:bg-forest-green/90 font-semibold px-8 py-6 rounded-2xl"
+                  onClick={() => window.open('https://navgurukul.notion.site/276a93c7c3918093b6eedc055b29eed2?pvs=105', '_blank')}
                 >
                   Partner With Us
-                  <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
                 </Button>
                 <Button
                   variant="outline"
@@ -90,10 +90,10 @@ const Hero = () => {
             </div>
 
             {/* Right Content - Takes 5 columns - Single Image */}
-            <div className="lg:col-span-5 relative hidden lg:block">
+            <div className="lg:col-span-5 relative">
               {/* Single Image with Frame - Fixed height */}
               <div className="h-[450px]">
-                <div className="relative h-full p-2 bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 animate-float-slow">
+                <div className="relative h-full p-2 bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300">
                   <img
                     src={heroBackgroundImage}
                     alt="Zuvy Learning Experience"

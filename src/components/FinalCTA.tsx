@@ -3,7 +3,7 @@ import { ArrowRight } from "lucide-react";
 
 const FinalCTA = () => {
   return (
-    <section className="py-24 bg-light-beige relative overflow-hidden">
+    <section className="py-20 bg-light-beige relative overflow-hidden">
 
       {/* Floating geometric shapes for motion graphics */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
@@ -25,55 +25,40 @@ const FinalCTA = () => {
       </div>
 
       <div className="container mx-auto px-6 relative z-10">
-        <div className="text-center mb-12">
-          <h2 className="text-4xl lg:text-5xl font-bold text-forest-green mb-6">
-            Let's Build the Future of Work{" "}
-            <span className="text-moss-green">
-              Together
-            </span>
-          </h2>
-          <p className="text-xl text-forest-green/80 max-w-3xl mx-auto">
-            Whether you're looking to advance your career, upskill your workforce, or create meaningful impact,
-            Zuvy has the perfect solution for you.
-          </p>
-        </div>
+        <div className="max-w-5xl mx-auto">
+          <div className="bg-gradient-to-br from-forest-green to-moss-green rounded-3xl p-12 lg:p-16 text-center shadow-2xl">
+            <h2 className="text-3xl lg:text-5xl font-bold text-white mb-6">
+              Let's Build the Future of Work{" "}
+              <span className="text-sunbeam-yellow">
+                Together
+              </span>
+            </h2>
 
-        {/* Redesigned Contact CTA Section */}
-        <div className="max-w-4xl mx-auto">
-          <div className="relative group">
-            <div className="relative bg-white rounded-3xl p-12 border border-forest-green/10 text-center group-hover:-translate-y-2 transition-all duration-500 shadow-xl">
-              <div className="w-20 h-20 bg-moss-green rounded-2xl mx-auto mb-6 flex items-center justify-center shadow-lg">
-                <ArrowRight className="w-10 h-10 text-white" />
-              </div>
+            <p className="text-lg lg:text-xl text-white/90 max-w-3xl mx-auto mb-10">
+              Whether you're looking to advance your career, upskill your workforce, or create meaningful impact,
+              Zuvy has the perfect solution for you.
+            </p>
 
-              <h3 className="text-3xl lg:text-4xl font-bold text-forest-green mb-6">
-                Ready to Transform Your Future?
-              </h3>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+              <Button
+                size="lg"
+                className="bg-white text-forest-green hover:bg-white/90 font-semibold px-8 py-4 text-lg shadow-lg hover:scale-105 transition-all duration-300 rounded-2xl"
+                onClick={() => window.open('https://navgurukul.notion.site/276a93c7c3918093b6eedc055b29eed2?pvs=105', '_blank')}
+              >
+                Contact Us Today
+              </Button>
+              <Button
+                size="lg"
+                variant="outline"
+                className="border-2 border-white bg-transparent text-white hover:bg-white hover:text-forest-green font-semibold px-8 py-4 text-lg hover:scale-105 transition-all duration-300 rounded-2xl"
+                onClick={() => window.open('https://calendar.app.google/A28Dx92H1Cd23rgj8', '_blank')}
+              >
+                Schedule a Call
+              </Button>
+            </div>
 
-              <p className="text-xl text-forest-green/80 mb-8 max-w-2xl mx-auto leading-relaxed">
-                Whether you're an individual learner, organization, or partner, we're here to help you succeed.
-                Let's discuss how Zuvy can create the perfect learning solution for your needs.
-              </p>
-
-              <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-                <Button
-                  size="lg"
-                  className="bg-forest-green text-white hover:bg-forest-green/90 font-semibold px-8 py-4 text-lg shadow-md"
-                >
-                  Contact Us Today
-                </Button>
-                <Button
-                  size="lg"
-                  variant="outline"
-                  className="border-2 border-forest-green bg-white text-forest-green hover:bg-forest-green hover:text-white font-semibold px-8 py-4 text-lg"
-                >
-                  Schedule a Call
-                </Button>
-              </div>
-
-              <div className="mt-8 text-forest-green/60">
-                <p className="text-sm">Get in touch with our team • Free consultation • Custom solutions</p>
-              </div>
+            <div className="mt-8 text-white/80">
+              <p className="text-sm">Get in touch with our team • Free consultation • Custom solutions</p>
             </div>
           </div>
         </div>

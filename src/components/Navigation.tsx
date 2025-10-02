@@ -25,18 +25,12 @@ const Navigation = ({ currentPage = "" }: NavigationProps) => {
           <div className="flex items-center justify-between">
             <div className="flex items-center space-x-3">
               <a href="/">
-                <img src={zuvyLogo} alt="Zuvy" className="h-16 md:h-20 w-auto" />
+                <img src={zuvyLogo} alt="Zuvy" className="h-12 md:h-14 w-auto" />
               </a>
             </div>
 
             {/* Desktop Menu */}
             <div className="hidden lg:flex items-center space-x-2">
-              <a
-                href="/#programs"
-                className="text-forest-green/80 hover:text-forest-green hover:bg-forest-green/10 px-4 py-2 rounded-2xl transition-all duration-300 font-medium"
-              >
-                Programs
-              </a>
               <a
                 href="/about"
                 className={`px-4 py-2 rounded-2xl transition-all duration-300 font-medium ${
@@ -46,6 +40,12 @@ const Navigation = ({ currentPage = "" }: NavigationProps) => {
                 }`}
               >
                 About Us
+              </a>
+              <a
+                href="/#programs"
+                className="text-forest-green/80 hover:text-forest-green hover:bg-forest-green/10 px-4 py-2 rounded-2xl transition-all duration-300 font-medium"
+              >
+                Programs
               </a>
               <a
                 href="/#testimonials"
@@ -83,13 +83,6 @@ const Navigation = ({ currentPage = "" }: NavigationProps) => {
             <div className="lg:hidden mt-4 pt-4 border-t border-forest-green/10">
               <div className="flex flex-col space-y-2">
                 <a
-                  href="/#programs"
-                  className="text-forest-green hover:text-white hover:bg-forest-green px-4 py-3 rounded-2xl transition-all duration-300 font-medium text-center"
-                  onClick={() => setIsMobileMenuOpen(false)}
-                >
-                  Programs
-                </a>
-                <a
                   href="/about"
                   className={`px-4 py-3 rounded-2xl transition-all duration-300 font-medium text-center ${
                     currentPage === "about"
@@ -99,6 +92,13 @@ const Navigation = ({ currentPage = "" }: NavigationProps) => {
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
                   About Us
+                </a>
+                <a
+                  href="/#programs"
+                  className="text-forest-green hover:text-white hover:bg-forest-green px-4 py-3 rounded-2xl transition-all duration-300 font-medium text-center"
+                  onClick={() => setIsMobileMenuOpen(false)}
+                >
+                  Programs
                 </a>
                 <a
                   href="/#testimonials"
