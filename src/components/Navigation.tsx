@@ -25,9 +25,7 @@ const Navigation = ({ currentPage = "" }: NavigationProps) => {
           <div className="flex items-center justify-between">
             <div className="flex items-center space-x-3">
               <a href="/">
-                <div className="bg-forest-green/10 rounded-2xl p-2 hover:bg-forest-green/20 transition-all duration-300">
-                  <img src={zuvyLogo} alt="Zuvy" className="h-8 md:h-10 w-auto" />
-                </div>
+                <img src={zuvyLogo} alt="Zuvy" className="h-16 md:h-20 w-auto" />
               </a>
             </div>
 
