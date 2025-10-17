@@ -58,7 +58,7 @@ const FinalCTA = () => {
             </div>
 
             <div className="mt-8 text-white/80">
-              <p className="text-sm">Get in touch with our team • Free consultation • Custom solutions</p>
+              <p className="text-sm">Get in touch with our team • Request a Demo • Custom solutions</p>
             </div>
           </div>
         </div>

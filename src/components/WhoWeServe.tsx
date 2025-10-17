@@ -19,7 +19,7 @@ const WhoWeServe = () => {
     },
     {
       icon: Code,
-      title: "Zuvy Tech Bootcamps",
+      title: "Zuvy Finishing School",
       subtitle: "For Learners",
       description: "Full-stack development, DSA, and more with hands-on projects and placement readiness. Subsidized or sponsored through partner funding.",
       features: [
